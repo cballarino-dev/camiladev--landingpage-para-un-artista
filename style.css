@@ -426,11 +426,10 @@ h2 {
 
 .about {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-       
+    display: grid;
+   grid-template-columns: 1.2fr 1fr;
+   gap: 4rem;
+   align-items: center;
 }
 
 
@@ -450,11 +449,9 @@ h2 {
                                    /* Mobile about */
 
 @media (max-width: 768px) {
-    
-    .about-content {
-       max-width: 100%;
-       padding: 0.5rem;
-    }
+  .about-container {
+    grid-template-columns: 1fr;
+  }
 }
 
                                     /* FAQ */
