@@ -189,10 +189,10 @@ section {
     background-repeat: no-repeat;
    
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     text-align: left;
-    padding-top: 6rem;
+    padding-top: 8rem;
     
 }
 .hero::before {
@@ -202,8 +202,8 @@ section {
   z-index: 0;
 
  background: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.5)
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.6)
   );
 }
 
@@ -241,7 +241,7 @@ h1 {
     font-family: "Bebas Neue", cursive;
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     margin-bottom: 1rem;
     color: #EDEDED;
     text-align: left;
@@ -252,10 +252,10 @@ h1 {
     font-size: clamp(1.8rem, 2vw, 2.8rem);
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     padding: 0.5rem 0;
     text-align: left;
-    color: #A1A1AA;
+    color: #EDEDED;
     opacity: 0.9;
     margin-bottom: 0.3rem;
 }
@@ -264,10 +264,10 @@ h1 {
     font-size: clamp(1.5rem, 1.8vw, 2.2rem);
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     padding: 0.5rem 0;
     text-align: left;
-    color: #A1A1AA;
+    color: #EDEDED;
     opacity: 0.9;
 }
 
@@ -301,32 +301,12 @@ h1 {
                            /* Mobile Hero */
 
 @media (max-width: 768px) {
-    .hero {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding-top: 0;
-    }
 
     .hero-content {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         gap: 1rem;
         margin-left:  0;
     }
 
-    h1 {
-        text-align: center; 
-    }
-    .subtitle {
-        text-align: center;
-   
-}
-
-    .description {
-         text-align: center;
-        }
 
     .button-cta:active {
          color: #fff;
@@ -431,17 +411,17 @@ h1 {
         max-width: 100%;
     }
     .gallery-title h2 {
-     padding: 0 0 2rem 0;
+     padding: 0 0 2rem 0.5rem;
    
 }
 .gallery .subtitle {
     text-align: left;
-    padding-left: 0;
+    padding-left: 0.5rem;
 }
 
 .gallery .description {
     text-align: left;
-    padding-left: 0;
+    padding-left: 0.5rem;
     
 }
 }
@@ -453,7 +433,7 @@ h1 {
     display: grid;
    grid-template-columns: 1.3fr 1fr;
    gap: 3rem;
-   align-items: center;
+   
 }
 
 
@@ -506,15 +486,15 @@ h1 {
 .about-image img {
     width: 100%;
    height: 100%;
-   padding: 1rem;
+   
     object-fit: cover;
     display: block;
     border-radius: 12px;
     object-position: right center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     transition: transform 0.4s ease;
+    border: 2px solid rgba(111, 90, 58, 0.45);
 }
-
 
                                                     /* Mobile about */
 
@@ -535,12 +515,12 @@ h1 {
 }
 
 .about-content h2 {
-    padding-left: 0;
+    padding-left: 0.5rem;
 }
 
 .about-content .subtitle,
 .about-content .description{
-   padding-left: 0;
+   padding-left: 0.5rem;
 }
 
 
@@ -563,42 +543,57 @@ h1 {
 .faq{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
     max-width: 1200px;
-    margin: 4rem auto;
-   
+    padding: 10rem 1rem;
+   margin: 4rem auto;
 }
-.faq h2{
+.faq-title {
      grid-column: 1/-1;
-     text-align: center;
+    
+}
+
+.faq-title h2 {
+    font-size:  clamp(2.2rem, 6vw, 5.5rem);
+    font-family: "Bebas Neue", cursive;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    color: #EDEDED;
+    text-align: left;
+    padding-left: 1rem;
 }
 
 .faq-item {
     padding: 1rem;
-    border: 2px solid #7B2CFF;
+    border: 1px solid #7B2CFF;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .faq-item:hover {
     transform: translateY(-5px);
     transition: all 0.5s ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-     background-color: rgba(255, 255, 255, 0.02);
+    background-color: rgba(123, 44, 255, 0.08);
 }
 .faq-item h3 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     padding: 1rem 0.05rem;
-    color: #A1A1AA;
+    color: #EDEDED;
     font-family: "Inter", sans-serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 .faq-item p {
     font-size: clamp(0.9rem, 2vw, 1.25rem);
-    text-align: center;
+    text-align: left;
     padding: 0.5rem;
+    color: #EDEDED;
+    opacity: 0.9;
+     font-family: "Inter", sans-serif;
 }
 
 
@@ -609,6 +604,9 @@ h1 {
          margin: 1rem auto;
         
     }
+    .faq-title h2 {
+    padding-left: 0.5rem;
+}
  }
 
 @media (max-width: 480px) {
@@ -617,6 +615,9 @@ h1 {
         max-width: 100%;
          margin: 1rem auto;
     }
+    .faq-title h2 {
+    padding-left: 0.5rem;
+}
     
 }  
 
