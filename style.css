@@ -165,17 +165,10 @@ header {
 }
 
 section {
-    width: 100%;
+    
     min-height: 100vh; 
 }
 
-@media (max-width: 768px) {
-    section {
-        
-        padding: 2.5rem 0.5rem;
-    }
-    
-}
 
                   /* Hero */
 
@@ -229,7 +222,8 @@ section {
     align-items: flex-start;
     text-align: left;
     gap: 1.4rem;
-    margin-left:  clamp(3rem, 10vw, 10rem);
+   padding: 0 5rem;
+    
     position: relative;
     z-index: 1;
  
@@ -286,7 +280,8 @@ h1 {
     font-family: "Inter", sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 .button-cta:hover {
    color: #fff;
@@ -304,7 +299,8 @@ h1 {
 
     .hero-content {
         gap: 1rem;
-        margin-left:  0;
+        padding: 0 1rem;
+      
     }
 
 
@@ -334,7 +330,7 @@ h1 {
 .gallery-title {
     grid-column: 1/-1;
      text-align: left; 
-     padding-bottom: 4rem;
+   
 }
 
  .gallery-title h2 {
@@ -343,22 +339,22 @@ h1 {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0.08em;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: #EDEDED;
     text-align: left;
-     padding: 0 0 2rem 1rem;
+    
    
 }
 
 
   .gallery .subtitle {
     text-align: left;
-    padding-left: 1rem;
+   
 }
 
 .gallery .description {
     text-align: left;
-    padding-left: 1rem;
+  
     
 }
 
@@ -387,21 +383,6 @@ h1 {
         grid-template-columns:  repeat(2, 1fr);
         max-width: 100%;
     }
-    .gallery-title h2 {
-  
-     padding: 0 0 2rem 0;
-   
-}
-.gallery .subtitle {
-    text-align: left;
-    padding-left: 0;
-}
-
-.gallery .description {
-    text-align: left;
-    padding-left: 0;
-    
-}
 }
 
 @media (max-width: 480px) {
@@ -416,12 +397,11 @@ h1 {
 }
 .gallery .subtitle {
     text-align: left;
-    padding-left: 0.5rem;
+  
 }
 
 .gallery .description {
     text-align: left;
-    padding-left: 0.5rem;
     
 }
 }
@@ -459,28 +439,31 @@ h1 {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0.08em;
-    margin-bottom: 1rem;
     color: #EDEDED;
     text-align: left;
-    padding-left: 1rem;
+    
 }
 
 .about-content .subtitle,
 .about-content .description{
     text-align: left;
-  padding-left: 1rem;
+  
 }
 
 
 .about-image {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-height: 620px;
+    display: flex;
+    align-items: center; 
+}
+
+.about-image-wrapper {
+   max-height: 620px;
     overflow: hidden;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-  
-   
+    width: 100%;
 }
 
 .about-image img {
@@ -496,12 +479,42 @@ h1 {
     border: 2px solid rgba(111, 90, 58, 0.45);
 }
 
+ .about-image-description{
+    margin-top: 1rem;
+
+    font-size: clamp(0.5rem, 2vw, 0.75rem);
+    letter-spacing: 0.18em;
+
+    color: rgba(237,237,237,0.55);
+    font-family: "Inter", sans-serif;
+
+    text-transform: uppercase;
+    align-self: flex-start;
+ 
+}
+.about-image-description::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 24px;
+    height: 1px;
+    opacity: 0.7;
+
+    background: rgba(111, 90, 58, 0.45);
+
+    margin-right: 12px;
+
+    vertical-align: middle;
+}
+
                                                     /* Mobile about */
 
 @media (max-width: 1024px) {
   .about {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 5rem 1rem;
   }
 
 .about-content {
@@ -513,17 +526,6 @@ h1 {
     max-width: 100%;
   
 }
-
-.about-content h2 {
-    padding-left: 0.5rem;
-}
-
-.about-content .subtitle,
-.about-content .description{
-   padding-left: 0.5rem;
-}
-
-
 }
 
 
@@ -559,10 +561,10 @@ h1 {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0.08em;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: #EDEDED;
     text-align: left;
-    padding-left: 1rem;
+    
 }
 
 .faq-item {
@@ -602,11 +604,10 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
          margin: 1rem auto;
+         padding: 5rem 1rem;
         
     }
-    .faq-title h2 {
-    padding-left: 0.5rem;
-}
+
  }
 
 @media (max-width: 480px) {
@@ -615,55 +616,79 @@ h1 {
         max-width: 100%;
          margin: 1rem auto;
     }
-    .faq-title h2 {
-    padding-left: 0.5rem;
-}
+
     
 }  
 
+                              /* Contact Section */
 
-
-      .contact{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding:  1rem;
-        max-width: 800px;
-        margin: 0 auto;
-
-    }
-    .contact a{
-        text-decoration: none;
-        color: #FF1F1F ;
-
-    }
-    .contact a:active, .contact a:hover{
-        text-decoration: underline;
-        color: #FF1F1F ;
-
-    }
-
-    .contact-info{
-    margin: 3rem 0;
-    padding: 1.5rem;
+    .contact{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    border: 2px solid #7B2CFF;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 10rem 1rem;
+    text-align: left;
+
+    }
+    .contact h2{
+    font-size:  clamp(2.2rem, 6vw, 5.5rem);
+    font-family: "Bebas Neue", cursive;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    margin-bottom: 3rem;
+    color: #EDEDED;
+    text-align: left;
+    
+    text-align: left;
 }
-.contact-info:hover{
-        background-color: rgba(123, 44, 255, 0.08);
-        box-shadow: 0 8px 20px rgba(123,44,255,0.25);
-        transition: all 0.5s ease;
-        border: 2px solid #7B2CFF;
+
+.button-contact{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 31, 31, 0.08) ;
+    border: 2px solid #FF1F1F;
+    color: #FF1F1F;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    margin: 2.2rem 0 0 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.button-contact:hover {
+   color: #fff;
+   font-weight: 600;
+   background-color: #FF1F1F ;
+  border-color: #FF1F1F;
+  box-shadow: 0 6px 16px rgba(255, 31, 31, 0.18);
+  transform: translateY(-2px);
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 768px) {
     .contact{
-        max-width: 600px;
+        max-width: 100%;
+         margin: 1rem auto;
     }
+
+    
+     .button-contact:active {
+         color: #fff;
+        font-weight: 600;
+        background-color: #FF1F1F ;
+        border-color: #FF1F1F;
+        box-shadow: 0 8px 20px rgba(255, 31, 31, 0.25);
+        transform: translateY(-2px);
+         transition: all 0.5s ease;
+}
+
 }
 
       footer {
