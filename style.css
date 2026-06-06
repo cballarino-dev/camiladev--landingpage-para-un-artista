@@ -32,7 +32,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 1.5rem 4rem;
     position: sticky;
     width: 100%;
    
@@ -43,7 +43,7 @@ header {
 .logo  span{
     display: flex;
     align-items: center;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1rem, 4vw, 2.2rem);
     font-weight: bold;
     font-family: "Bebas Neue", cursive;
     letter-spacing: 0.05em;
@@ -185,7 +185,8 @@ section {
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    padding-top: 8rem;
+      margin: 0 auto;
+    
     
 }
 .hero::before {
@@ -222,7 +223,7 @@ section {
     align-items: flex-start;
     text-align: left;
     gap: 1.4rem;
-   padding: 0 5rem;
+   padding: 0 6rem;
     
     position: relative;
     z-index: 1;
@@ -243,10 +244,10 @@ h1 {
 }
 
 .subtitle {
-    font-size: clamp(1.8rem, 2vw, 2.8rem);
+    font-size: clamp(1.25rem, 2vw, 2.8rem);
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     padding: 0.5rem 0;
     text-align: left;
     color: #EDEDED;
@@ -255,10 +256,10 @@ h1 {
 }
 
 .description {
-    font-size: clamp(1.5rem, 1.8vw, 2.2rem);
+    font-size: clamp(1.15rem, 1.8vw, 2.2rem);
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     padding: 0.5rem 0;
     text-align: left;
     color: #EDEDED;
@@ -318,7 +319,7 @@ h1 {
 
                               /* Galería */
 .gallery {
-    padding: 10rem 1rem;
+    padding: 5rem 1rem;
      display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -379,7 +380,7 @@ h1 {
 
 @media (max-width: 768px) {
     .gallery{
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
         grid-template-columns:  repeat(2, 1fr);
         max-width: 100%;
     }
@@ -387,7 +388,7 @@ h1 {
 
 @media (max-width: 480px) {
     .gallery {
-         padding: 5rem 1rem;
+         padding: 3rem 1rem;
         grid-template-columns: repeat(1, 1fr);
         max-width: 100%;
     }
@@ -409,12 +410,11 @@ h1 {
                                           /*About Us  */
 
 .about {
-     padding: 10rem 1rem;
+     padding: 5rem 1rem;
     display: grid;
    grid-template-columns: 1.3fr 1fr;
    gap: 3rem;
-   
-}
+   } 
 
 
 .about-content {
@@ -514,7 +514,7 @@ h1 {
   .about {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
   }
 
 .about-content {
@@ -547,7 +547,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     max-width: 1200px;
-    padding: 10rem 1rem;
+    padding: 5rem 1rem;
    margin: 4rem auto;
 }
 .faq-title {
@@ -604,7 +604,7 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
          margin: 1rem auto;
-         padding: 5rem 1rem;
+         padding: 3rem 1rem;
         
     }
 
@@ -629,7 +629,7 @@ h1 {
     align-items: flex-start;
     margin: 4rem auto;
     max-width: 1200px;
-    padding: 10rem 1rem;
+    padding: 5rem 1rem;
     text-align: left;
 
     }
@@ -676,6 +676,7 @@ h1 {
     .contact{
         max-width: 100%;
          margin: 1rem auto;
+           padding: 3rem 1rem;
     }
 
     
