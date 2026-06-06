@@ -78,7 +78,7 @@ header {
     display: block;
     width: 28px;
     height: 3px;
-    background:#7B2CFF;
+    background:rgba(111, 90, 58, 0.45);
    border-radius: 2px;
    transition: 0.3s;
 }
@@ -283,15 +283,16 @@ h1 {
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+     box-shadow: 0 8px 20px rgba(255, 31, 31, 0.25);
+  transform: translateY(-2px);
+  transition: all 0.5s ease;
 }
 .button-cta:hover {
    color: #fff;
    font-weight: 600;
    background-color: #FF1F1F ;
   border-color: #FF1F1F;
-  box-shadow: 0 8px 20px rgba(255, 31, 31, 0.25);
-  transform: translateY(-2px);
-  transition: all 0.5s ease;
+ 
 }
 
                            /* Mobile Hero */
@@ -414,6 +415,7 @@ h1 {
     display: grid;
    grid-template-columns: 1.3fr 1fr;
    gap: 3rem;
+   margin: 0 auto;
    } 
 
 
@@ -587,7 +589,7 @@ h1 {
     padding: 1rem 0.05rem;
     color: #EDEDED;
     font-family: "Inter", sans-serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.25rem, 3vw, 2rem);
 }
 .faq-item p {
     font-size: clamp(0.9rem, 2vw, 1.25rem);
@@ -625,14 +627,17 @@ h1 {
     .contact{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    
     align-items: flex-start;
-    margin: 4rem auto;
+    margin: 0 auto;
     max-width: 1200px;
     padding: 5rem 1rem;
     text-align: left;
+    
+    min-height: auto;
+}
 
-    }
+    
     .contact h2{
     font-size:  clamp(2.2rem, 6vw, 5.5rem);
     font-family: "Bebas Neue", cursive;
@@ -661,21 +666,22 @@ h1 {
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    box-shadow: 0 6px 16px rgba(255, 31, 31, 0.18);
+  transform: translateY(-2px);
+  transition: all 0.5s ease;
 }
 .button-contact:hover {
    color: #fff;
    font-weight: 600;
    background-color: #FF1F1F ;
   border-color: #FF1F1F;
-  box-shadow: 0 6px 16px rgba(255, 31, 31, 0.18);
-  transform: translateY(-2px);
-  transition: all 0.5s ease;
+  
 }
 
 @media (max-width: 768px) {
     .contact{
         max-width: 100%;
-         margin: 1rem auto;
+         
            padding: 3rem 1rem;
     }
 
@@ -692,35 +698,104 @@ h1 {
 
 }
 
-      footer {
+    footer {
+        
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 1rem 1rem;
+    border-top: 2px solid rgba(111, 90, 58, 0.45);
+
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+   
+  
+    
+}
+
+.footer-title {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    color: #EDEDED;
+    text-align: left;
+    text-transform: uppercase;
+    /* Línea separadora */
+    border-bottom: 2px solid rgba(111, 90, 58, 0.45);
+    padding-bottom: 0.5rem;
+}
+.footer-text{
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    color: #EDEDED;
+    text-align: left;
+    padding: 0.5rem 0;
+}
+.footer-text a{
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    color: #EDEDED;
+    text-align: left;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-text a:hover{
+    color: #FF1F1F;
+    border-bottom: 1px solid #FF1F1F;
+    
+}
+.footer-rights {
+    grid-column: 1/-1;
+    
     text-align: center;
     
-}
-footer p {
+    font-size: clamp(0.75rem, 2vw, 1rem);
     font-family: "Inter", sans-serif;
-    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: #EDEDED;
+    opacity: 0.7;
+    padding: 2rem 0;
+        /* Línea separadora */
+    border-top: 2px solid rgba(111, 90, 58, 0.45);
 }
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem 0;
-    
+
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr;
+        
+        max-width: 100%;
+         margin: 1rem auto;
+         padding: 2rem 1rem;
+    }
+     .footer-content {
+        padding-left: 0;
+    }
+     .footer-rights {
+       padding: 0.5rem 0;
+    }
 }
-.social-links a {
-    color: #7B2CFF;
-    font-family: "Inter", sans-serif;
-    padding: 1rem 1.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    
-}
-.social-links a:hover {
-      color: #fff;
-    background: rgba(123, 44, 255, 0.15);
-    transform: translateY(-2px);
-    border-radius: 6px;
-}
+
 .whatsapp-link {
   position: fixed;
   bottom: 40px;
