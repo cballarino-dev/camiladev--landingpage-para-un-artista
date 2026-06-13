@@ -78,7 +78,7 @@ header {
     display: block;
     width: 28px;
     height: 3px;
-    background:rgba(111, 90, 58, 0.45);
+    background:#A1A1AA;
    border-radius: 2px;
    transition: 0.3s;
 }
@@ -166,54 +166,64 @@ header {
 
 section {
     
-    min-height: 100vh; 
+    min-height: 100svh; 
 }
 
 
                   /* Hero */
-
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 100svh;
 
-    background-image: url(./images/imagen-de-fondo-para-hero.webp); /* Espacio para imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    text-align: left;
-      margin: 0 auto;
-    
-    
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
 
- background: linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.6)
-  );
+    text-align: left;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url(./images/hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.02);
+
+    filter:
+        contrast(1.05)
+        saturate(1.05);
+
+    z-index: -2;
 }
 
 .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+    content: "";
+    position: absolute;
+    inset: 0;
 
-  background: radial-gradient(
-    circle at 30% 50%,
-    rgba(0,0,0,0.3),
-    transparent 60%
-  );
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.45) 0%,
+            rgba(0,0,0,0.25) 35%,
+            rgba(0,0,0,0.55) 100%
+        ),
+      
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(0,0,0,0.15) 0%,
+            rgba(0,0,0,0.45) 70%
+        );
 
-  pointer-events: none;
+    z-index: -1;
 }
 
 .hero-content {
@@ -303,6 +313,9 @@ h1 {
         gap: 1rem;
         padding: 0 1rem;
       
+    }
+    .hero::before {
+        background-position: 65% center;
     }
 
 
